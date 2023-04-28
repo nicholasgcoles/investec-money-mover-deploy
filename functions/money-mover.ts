@@ -130,6 +130,6 @@ const myHandler: Handler = async (
   };
 };
 
-const handler = schedule('@hourly', myHandler);
+const handler = schedule('*/20 * * * *', myHandler);
 
 export { handler };
