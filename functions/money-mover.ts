@@ -104,7 +104,8 @@ const transferManager = async () => {
     diffFromTarget,
   });
 
-  let diffFromTarget = parseFloat(diffFromTarget.toFixed(2));
+  // Ensure 2 decimal places
+  diffFromTarget = parseFloat(diffFromTarget.toFixed(2));
 
   const reference = `Money Mover - Auto Transfer`;
   const transferResponse = await fromAccount.transfer([
