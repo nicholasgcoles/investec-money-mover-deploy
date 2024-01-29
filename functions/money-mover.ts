@@ -104,6 +104,8 @@ const transferManager = async () => {
     diffFromTarget,
   });
 
+  let diffFromTarget = parseFloat(diffFromTarget.toFixed(2));
+
   const reference = `Money Mover - Auto Transfer`;
   const transferResponse = await fromAccount.transfer([
     {
@@ -130,6 +132,6 @@ const myHandler: Handler = async (
   };
 };
 
-const handler = schedule('*/20 * * * *', myHandler);
+const handler = schedule('0 0,12 * * *', myHandler);
 
 export { handler };
